@@ -1,0 +1,138 @@
+
+.btn{
+  display: block;
+  position:relative;
+  width:140px;
+  height:30px;
+  border: 2px solid #CEFB08;
+  color: #CEFB08;
+  font-weight:900;
+  border-radius: 15px;
+  line-height:26px;
+  text-align: center;
+  cursor:pointer;
+  text-decoration: unset;
+
+  &.btn-large{
+    width: 200px;
+    height: 50px;
+    line-height:46px;
+    border-radius: 25px;
+    border-width: 3px;
+    font-size: 20px;
+  }
+
+  &.btn-primary{
+    border: 2px solid #CEFB08;
+    color: #CEFB08;
+    &:hover{
+      background-color:#CEFB08;
+      color: #000;
+    }
+
+    &.btn-invert{
+        background-color:#CEFB08 ;
+        color: #000 ;
+        &:hover{
+          color: #CEFB08;
+          background:transparent !important;
+        }
+
+      }
+    
+  }
+
+  &.btn-secondary{
+    background-color:#CEFB08;
+      color: #000;
+    
+
+    &:hover{
+      background-color:transparent;
+      color: #CEFB08;
+      
+    }
+  }
+
+  &.btn-white{
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    background: #00000033;
+    
+    &:hover{
+      background: #00000067;
+    }
+  }
+
+  &.btn-black{
+        border: 3px solid #000000;
+        color: #000000;
+      
+      &:hover{
+        background: #00000033;
+      }
+
+  }
+
+  &.btn-hover-overlay{
+      &:hover{
+          &:after{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: #000;
+            opacity:0.2;
+          }
+        }
+  }
+
+}
+
+body.city-is-sibiu{
+  .btn.diff-sibiu-valcea{
+    &.btn-primary{
+      border: 2px solid #CEFB08;
+      color: #CEFB08;
+      &:hover{
+        background-color:#CEFB08;
+        color: #000;
+      }
+
+      &.btn-invert{
+        background-color:#CEFB08;
+        color: #000;
+        &:hover{
+          color: #CEFB08;
+        }
+
+      }
+    }
+  }
+
+}
+
+body.city-is-valcea{
+  .btn.diff-sibiu-valcea{
+      &.btn-primary{
+      border: 2px solid  #ff0db9;
+      color: #ff0db9;
+      &:hover{
+        background-color:#ff0db9;
+        color: #000;
+      }
+
+      &.btn-invert{
+        background-color:#ff0db9;
+        color: #000;
+        &:hover{
+          color: #ff0db9;
+        }
+
+      }
+    }
+    }
+  
+}

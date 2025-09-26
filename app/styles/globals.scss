@@ -1,0 +1,107 @@
+
+@use '_modern-normalize' as *;
+@use '_nav' as *;
+
+@use '_utils' as *;
+@use '_utils-margins' as *;
+@use '_utils-images' as *;
+@use '_inputs' as *;
+@use '_icons' as *;
+@use '_buttons' as *;
+@use '_mobile-specific' as *;
+@use 'components/_swiper-responsive' as *;
+@use 'components/_common-page-structure' as *;
+
+html{
+  height:100%;
+  width:100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-poppins);
+  min-height: 100%;
+  width:100%;
+}
+
+
+.font-safiro {
+  font-family: var(--font-lora);
+}
+
+.font-default {
+  font-family: Arial, sans-serif;
+}
+
+body.city-is-sibiu{
+  .diff-sibiu-valcea{
+
+    color:#CEFB08;
+    border-color: #CEFB08 !important;
+    
+    &.diff-background{
+      background-color:#CEFB08;
+    }
+    &.diff-background[diff-background]{
+      background-color:#CEFB08;
+    }
+
+    &.diff-hover:hover{
+      color:#CEFB08;
+    }
+
+    &:after, &:before{
+      border-color: #CEFB08;
+    }
+
+    .swiper-pagination-bullet-active{
+              background:  #cefb08;
+    }
+  }
+
+  .swiper-pagination-bullet-active{
+              background:  #cefb08 !important;
+    }
+  
+}
+
+body.city-is-valcea{
+  .diff-sibiu-valcea{
+      color:#ff0db9;
+      border-color: #ff0db9 !important;
+    
+    &.diff-background{
+      background-color:#ff0db9;
+    }
+    &.diff-background[diff-background]{
+      background-color:#ff0db9;
+    }
+
+    &.diff-hover:hover{
+      color:#ff0db9;
+    }
+
+    &:after, &:before{
+      border-color: #ff0db9;
+    }
+
+
+  }
+
+  .swiper-pagination-bullet-active{
+              background:  #ff0db9 !important;
+    }
+}
+
+
+body.still-loading{
+  .hide-while-still-loading{
+    opacity:0 !important;
+    
+  }
+}
+
+.hide-while-still-loading{
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
