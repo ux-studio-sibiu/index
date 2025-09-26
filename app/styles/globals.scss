@@ -1,16 +1,10 @@
+// globals.scss
+
 
 @use '_modern-normalize' as *;
-@use '_nav' as *;
 
 @use '_utils' as *;
-@use '_utils-margins' as *;
-@use '_utils-images' as *;
-@use '_inputs' as *;
-@use '_icons' as *;
-@use '_buttons' as *;
-@use '_mobile-specific' as *;
-@use 'components/_swiper-responsive' as *;
-@use 'components/_common-page-structure' as *;
+@use 'typed' as *;
 
 html{
   height:100%;
@@ -23,6 +17,7 @@ body {
   font-family: var(--font-poppins);
   min-height: 100%;
   width:100%;
+  background-color: #000;
 }
 
 
@@ -34,74 +29,66 @@ body {
   font-family: Arial, sans-serif;
 }
 
-body.city-is-sibiu{
-  .diff-sibiu-valcea{
-
-    color:#CEFB08;
-    border-color: #CEFB08 !important;
-    
-    &.diff-background{
-      background-color:#CEFB08;
-    }
-    &.diff-background[diff-background]{
-      background-color:#CEFB08;
-    }
-
-    &.diff-hover:hover{
-      color:#CEFB08;
-    }
-
-    &:after, &:before{
-      border-color: #CEFB08;
-    }
-
-    .swiper-pagination-bullet-active{
-              background:  #cefb08;
-    }
-  }
-
-  .swiper-pagination-bullet-active{
-              background:  #cefb08 !important;
-    }
-  
-}
-
-body.city-is-valcea{
-  .diff-sibiu-valcea{
-      color:#ff0db9;
-      border-color: #ff0db9 !important;
-    
-    &.diff-background{
-      background-color:#ff0db9;
-    }
-    &.diff-background[diff-background]{
-      background-color:#ff0db9;
-    }
-
-    &.diff-hover:hover{
-      color:#ff0db9;
-    }
-
-    &:after, &:before{
-      border-color: #ff0db9;
-    }
-
-
-  }
-
-  .swiper-pagination-bullet-active{
-              background:  #ff0db9 !important;
-    }
-}
-
 
 body.still-loading{
   .hide-while-still-loading{
     opacity:0 !important;
-    
   }
 }
 
 .hide-while-still-loading{
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+div.animation {
+  color:#fff;
+  
+  text-align: center;
+  margin-top:10%;
+  line-height:60px;
+  height:60px;
+  width:100%;
+  display:inline-block;
+  position: relative;
+
+  &:before{
+    display: inline-block;
+    position: relative;
+    height: 60px;
+  }
+
+  &:after{
+    position:absolute !important;
+    top:0;
+  }
+
+      @include typed(
+        (
+          "<[15]>CREATIVE WEBSITES": (
+            text-transform:lowercase,
+            font-weight: 700,
+            font-size:60px,
+            
+          ),
+          // "CREATIVE WEBSITES": (
+          //   font-weight: 700,
+          //   font-size:60px
+          // )
+          
+        ),
+        (null, 1.2, 0.001),
+        (
+          iterations: 1,
+          end-on: (
+            "ux.studio.sibiu<[15]>@gmail.com \A 0748 546 788": ( 
+            font-size: 60px,
+            caret: false,
+            )
+          ),
+          caret-speed: 1,
+          caret-width: 4px,
+          caret-color: rgb(255, 255, 255),
+          caret-space: 2px
+        )
+      );
+    }
