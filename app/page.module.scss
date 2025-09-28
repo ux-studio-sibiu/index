@@ -5,6 +5,15 @@
   width: 100%;
 
   :global {
+
+    video{
+      position:absolute;
+      top:0;
+      height: 100%;
+      width:100%;
+    }
+
+
     div.studio-name {
       width: 100%;
       text-align: center;
